@@ -11,8 +11,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Endpoint do analizy obrazu
 app.post('/analyze-image', upload.single('image'), async (req, res) => {
     const imagePath = req.file.path;
-    const subscriptionKey = '<E3fbN4g6d2oyVo1eGnw7q17p8eNUi81ZZLwv4nUdLiiHpHfW6ZbCJQQJ99BAACYeBjFXJ3w3AAAFACOGKhM1>'; // Wklej swój klucz API
-    const endpoint = '<https://lumpekscomputervision.cognitiveservices.azure.com/>'; // Wklej swój Endpoint
+    const subscriptionKey = 'E3fbN4g6d2oyVo1eGnw7q17p8eNUi81ZZLwv4nUdLiiHpHfW6ZbCJQQJ99BAACYeBjFXJ3w3AAAFACOGKhM1'; // Wklej swój klucz API
+    const endpoint = 'https://lumpekscomputervision.cognitiveservices.azure.com/'; // Wklej swój Endpoint
 
     try {
         const imageBuffer = require('fs').readFileSync(imagePath);
